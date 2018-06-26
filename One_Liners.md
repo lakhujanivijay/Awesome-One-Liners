@@ -1,7 +1,5 @@
 # Shell one liners, using awk or something else!
 
----
-
 #### Give a 2 column, tab separated list of read no. and read length from fastq file
 `zcat whatever.fastq.gz | paste - - - - | awk '{print NR " " (length($3))}'`
 
@@ -11,9 +9,10 @@
 
 #### Change extension of multiple files at once.
 In below example, the extension changes from *.scafSeq to *.fa
+
 `for f in *.scafSeq; do mv "$f" "$(basename "$f" .scafSeq).fa"; done`
 
-`rename` command can also come handy in such cases. For e.g.
+`[rename](https://www.tecmint.com/rename-multiple-files-in-linux/)` command can also come handy in such cases. For e.g.
  Rename all `.fastq` files as `.fasta`
 
 `rename .fastq .fasta *.fastq`
