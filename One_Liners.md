@@ -12,7 +12,7 @@ In below example, the extension changes from *.scafSeq to *.fa
 
 `for f in *.scafSeq; do mv "$f" "$(basename "$f" .scafSeq).fa"; done`
 
-`[rename](https://www.tecmint.com/rename-multiple-files-in-linux/)` command can also come handy in such cases. For e.g.
+[rename](https://www.tecmint.com/rename-multiple-files-in-linux/) command can also come handy in such cases. For e.g.
  Rename all `.fastq` files as `.fasta`
 
 `rename .fastq .fasta *.fastq`
