@@ -8,7 +8,7 @@
 `zcat whatever.fastq.gz | wc -l | awk '{print $1/4}' `
 
 #### Change extension of multiple files at once.
-- In below example, the extension changes from *.scafSeq to *.fa
+In below example, the extension changes from *.scafSeq to *.fa
 `for f in *.scafSeq; do mv "$f" "$(basename "$f" .scafSeq).fa"; done`
 
 
