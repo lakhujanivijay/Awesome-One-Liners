@@ -39,3 +39,8 @@ In below example, the extension changes from *.scafSeq to *.fa
 
 #### Clean up a fasta file so only first column of the header is outputted:
 `awk '{print $1}' file.fa > output.fa`
+
+----
+
+#### Count the number of sequences in clusters generating using CD-HIT:
+`for i in *.clstr; do echo $i ; grep ">Cluster" -B 1 $i --no-group-separator | paste - - | awk '{print $1"_"$2 " "$3+1}' > $i.count.txt ; done`
