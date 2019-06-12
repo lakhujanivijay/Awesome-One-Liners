@@ -1,4 +1,5 @@
-# Shell one liners, using awk or something else!
+# One line, when multiple are not enough :+1:
+
 
 #### Give a 2 column, tab separated list of read no. and read length from fastq file
 `zcat whatever.fastq.gz | paste - - - - | awk '{print NR " " (length($3))}'`
