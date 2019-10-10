@@ -49,3 +49,8 @@ echo -e "seq_id\tA\tU\tG\tC"; while read line; do echo $line | grep ">" | sed 's
 ```
 for i in *.clstr; do echo $i ; grep ">Cluster" -B 1 $i --no-group-separator | paste - - | awk '{print $1"_"$2 " "$3+1}' > $i.count.txt ; done
 ```
+
+#### Change extension of fastq files in batch
+```
+rename 's/_fastp.fastq.gz/.fq.gz/' *gz 
+```
