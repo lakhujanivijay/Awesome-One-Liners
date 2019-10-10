@@ -52,5 +52,5 @@ for i in *.clstr; do echo $i ; grep ">Cluster" -B 1 $i --no-group-separator | pa
 
 #### Change extension of fastq files in batch
 ```
-rename 's/_fastp.fastq.gz/.fq.gz/' *gz 
+rename 's/_fastp.fastq.gz/.fq.gz/' *.gz 
 ```
